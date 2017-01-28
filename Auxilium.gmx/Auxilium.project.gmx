@@ -6,6 +6,17 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="Entities">
+      <sprites name="player">
+        <sprites name="Standing">
+          <sprite>sprites\spr_playerStandUp</sprite>
+          <sprite>sprites\spr_playerStandDown</sprite>
+          <sprite>sprites\spr_playerStandRight</sprite>
+          <sprite>sprites\spr_playerStandUpRight</sprite>
+          <sprite>sprites\spr_playerStandDownRight</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
     <sprites name="fonts">
       <sprite>sprites\spr_font</sprite>
     </sprites>
@@ -21,6 +32,8 @@
       </scripts>
     </scripts>
     <script>scripts\clearDraw.gml</script>
+    <script>scripts\playerCreator.gml</script>
+    <script>scripts\playerStand.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="utility">
@@ -30,6 +43,18 @@
       <objects name="AV">
         <object>objects\obj_screenResize</object>
         <object>objects\obj_volumeChange</object>
+      </objects>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_entity</object>
+      <objects name="Solid">
+        <object>objects\obj_solid</object>
+        <objects name="Moves">
+          <object>objects\obj_moves</object>
+          <objects name="Player">
+            <object>objects\obj_player</object>
+          </objects>
+        </objects>
       </objects>
     </objects>
     <object>objects\obj_tester</object>
