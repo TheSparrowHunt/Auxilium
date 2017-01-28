@@ -5,9 +5,39 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="fonts">
+      <sprite>sprites\spr_font</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Utility">
+      <script>scripts\setGlobalFontAndColours.gml</script>
+      <scripts name="inputManagement">
+        <script>scripts\checkInput.gml</script>
+        <script>scripts\initInput.gml</script>
+      </scripts>
+    </scripts>
+    <script>scripts\clearDraw.gml</script>
+  </scripts>
+  <objects name="objects">
+    <objects name="utility">
+      <object>objects\obj_preTotalInit</object>
+      <object>objects\obj_totalInit</object>
+      <object>objects\obj_control</object>
+      <objects name="AV">
+        <object>objects\obj_screenResize</object>
+        <object>objects\obj_volumeChange</object>
+      </objects>
+    </objects>
+    <object>objects\obj_tester</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

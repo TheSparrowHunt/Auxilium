@@ -1,0 +1,10 @@
+global.font0 = font_add_sprite(spr_font, 32, true, 1);
+global.purple = make_colour_rgb(118, 66, 138);
+global.pink = make_colour_rgb(215, 123, 186);
+global.blue = make_colour_rgb(91, 110, 225);
+global.teal = make_colour_rgb(99, 155, 255);
+global.green = make_colour_rgb(106, 190, 48);
+global.red = make_colour_rgb(172, 50, 50);
+global.yellow = make_colour_rgb(251, 242, 54);
+global.black = make_colour_rgb(34, 32, 52);
+global.white = make_colour_rgb(255, 255, 255);
