@@ -27,6 +27,13 @@
             <kind>1</kind>
             <string>playerCreator();
 image_speed = 0;
+//with the camera object
+with(obj_camera){
+    //set the camera's finalx = to the player's x
+    finalx = other.x;
+    //same but for y
+    finaly = other.y;
+}
 </string>
           </argument>
         </arguments>

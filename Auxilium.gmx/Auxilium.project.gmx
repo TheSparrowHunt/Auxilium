@@ -39,6 +39,9 @@
       <script>scripts\playerDirection.gml</script>
       <script>scripts\playerStand.gml</script>
     </scripts>
+    <script>scripts\initCamera.gml</script>
+    <script>scripts\updateCamera.gml</script>
+    <script>scripts\cameraCheck.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Utility">
@@ -48,6 +51,7 @@
       <objects name="AV">
         <object>objects\obj_screenResize</object>
         <object>objects\obj_volumeChange</object>
+        <object>objects\obj_camera</object>
       </objects>
     </objects>
     <objects name="Entities">

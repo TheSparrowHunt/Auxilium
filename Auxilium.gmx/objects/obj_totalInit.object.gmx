@@ -34,13 +34,13 @@ if (global.started == false){
     //change the following if you want to mess around with scaling
     
     //screen width in in-game pixels
-    global.screenWidth = 320;
+    global.screenWidth = 480;
     
     //screen height in in-game pixels
-    global.screenHeight = 180;
+    global.screenHeight = 270;
     
     //sets the multiplier for the resolution (to keep a 1:1 pixel ratio when scaled)
-    global.screenMultiplier = 3;
+    global.screenMultiplier = 2;
     
     //self explanitory
     global.fullscreen = false;
@@ -69,7 +69,7 @@ instance_create(x, y, obj_volumeChange);
 instance_create(x, y, obj_control);
 
 //sets up all the drawing to our defaults
-clearDraw()
+clearDraw();
 
 //runs the code in alarm[0] in 15 ticks
 alarm[0] = 15;
