@@ -25,7 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//forcing a singleton for protection
+            <string>//enum for state
+enum camState{
+    LISTEN,
+    FOLLOW,
+    LISTENFOLLOW
+}
+//start ready to be told
+camState = camState.LISTEN;
+
+//forcing a singleton for protection
 /*if (instance_number(obj_camera) &gt; 0){
     instance_destroy();
 }*/
@@ -53,6 +62,10 @@ minimumCameraMovement = 0.00065;
 startingCameraSpeed = 0.01;
 //gets the name of the current room and stores it to check if we've changed room later
 previousRoom = room_get_name(room);
+
+if (instance_number(obj_player) &gt; 0){
+    obj_following = asset_get_index("obj_player");
+}
 </string>
           </argument>
         </arguments>
@@ -80,70 +93,15 @@ if (previousRoom != room_get_name(room)){
     initCamera();
     previousRoom = room_get_name(room);
 }
-
-//if the camera isn't already at it's destination
-if (x != finalx){
-    //if the camera isn't already lerping between positions
-    if(lerpCounterx == 0.0){
-        lerpCounterx = 0.1;
-        lerpModifierx = startingCameraSpeed;
-    }
-    //if the camera has overshot its destination
-    else if (lerpCounterx &gt; 1.0){
-        lerpCounterx = 1.0;
-    }
-    //if we're lerping, although we should probably call this something else as it's no longer linear!
-    else{
-        //adjusts the rate of change
-        lerpModifierx -= lerpModifierModifierx;
-        //protection against it zeroing and staying in place
-        if (lerpModifierx &lt; minimumCameraMovement){
-            lerpModifierx = minimumCameraMovement;
-        }
-        
-        //adjusts the change
-        lerpCounterx += lerpModifierx;
-    }
-    //make x be a point between where it came from and where it's going
-    x = lerp(fromx, finalx, lerpCounterx);
-}
-else{
-    lerpCounterx = 0.0;
-    //set this position as the from point for when we move the camera again
-    fromx = x;
+switch (camState){
+    //for moving to an object then staying there
+    case camState.LISTEN: camListen(false); break;
+    //for following an object 
+    case camState.FOLLOW: camFollow(); break;
+    //for moving to an object, then following it
+    case camState.LISTENFOLLOW: camListen(true); break;
 }
 
-//if the camera isn't already at it's destination
-if (y != finaly){
-    //if the camera isn't already lerping between positions
-    if(lerpCountery == 0.0){
-        lerpCountery = 0.1;
-        lerpModifiery = startingCameraSpeed;
-    }
-    //if the camera has overshot its destination
-    else if (lerpCountery &gt; 1.0){
-        lerpCountery = 1.0;
-    }
-    //if we're lerping, although we should probably call this something else as it's no longer linear!
-    else{
-        //adjusts the rate of change
-        lerpModifiery -= lerpModifierModifiery;
-        //protection against it zeroing and staying in place
-        if (lerpModifiery &lt; minimumCameraMovement){
-            lerpModifiery = minimumCameraMovement;
-        }
-        
-        //adjusts the change
-        lerpCountery += lerpModifiery;
-    }
-    //make y be a point between where it came from and where it's going
-    y = lerp(fromy, finaly, lerpCountery);
-}
-else{
-    lerpCountery = 0.0;
-    //set this position as the from point for when we move the camera again
-    fromy = y;
-}
 //self explanitory
 updateCamera();
 

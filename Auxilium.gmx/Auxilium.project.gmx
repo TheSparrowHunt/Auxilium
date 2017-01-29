@@ -41,8 +41,10 @@
     </scripts>
     <script>scripts\initCamera.gml</script>
     <script>scripts\updateCamera.gml</script>
-    <script>scripts\cameraCheck.gml</script>
     <script>scripts\playerMove.gml</script>
+    <script>scripts\camListen.gml</script>
+    <script>scripts\camFollow.gml</script>
+    <script>scripts\camListenRegular.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Utility">

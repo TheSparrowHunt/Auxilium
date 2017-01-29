@@ -33,6 +33,7 @@ with(obj_camera){
     finalx = other.x;
     //same but for y
     finaly = other.y;
+    camState = camState.LISTENFOLLOW;
 }
 </string>
           </argument>
