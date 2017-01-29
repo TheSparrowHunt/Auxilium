@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_moves</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -57,7 +57,10 @@ with(obj_camera){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerDirection();
+            <string>//runs the inherited step too
+event_inherited();
+
+playerDirection();
 stateTest();
 //switch and case for behaviour.
 //TODO: finish this
@@ -95,6 +98,7 @@ previousDirectionState = directionState;
 draw_text(x, y - 30, string(state));
 draw_text(x, y - 20, string(directionState));
 clearDraw();
+
 </string>
           </argument>
         </arguments>

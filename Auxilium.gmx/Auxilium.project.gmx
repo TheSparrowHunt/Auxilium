@@ -16,6 +16,9 @@
           <sprite>sprites\spr_playerStandDownRight</sprite>
         </sprites>
       </sprites>
+      <sprites name="Environment">
+        <sprite>sprites\spr_cactus</sprite>
+      </sprites>
     </sprites>
     <sprites name="fonts">
       <sprite>sprites\spr_font</sprite>
@@ -61,6 +64,9 @@
       <object>objects\obj_entity</object>
       <objects name="Solid">
         <object>objects\obj_solid</object>
+        <objects name="Static">
+          <object>objects\obj_cactus0</object>
+        </objects>
         <objects name="Moves">
           <object>objects\obj_moves</object>
           <objects name="Player">
