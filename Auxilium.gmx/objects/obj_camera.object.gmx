@@ -146,6 +146,7 @@ else{
 }
 //self explanitory
 updateCamera();
+
 </string>
           </argument>
         </arguments>
@@ -174,6 +175,8 @@ draw_text(  0,320, "view_wport: "+ string(view_wport[0]));
 draw_text(  0,330, "view_hport: "+ string(view_hport[0]));
 draw_text(  0,340, "view_wview: "+ string(view_wview[0]));
 draw_text(  0,350, "view_hview: "+ string(view_hview[0]));
+draw_text(  0,360, "view_xport: "+ string(view_xport[0]));
+draw_text(  0,370, "view_yport: "+ string(view_yport[0]));
 clearDraw();
 </string>
           </argument>

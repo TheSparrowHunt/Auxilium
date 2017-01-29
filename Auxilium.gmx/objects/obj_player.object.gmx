@@ -62,6 +62,7 @@ stateTest();
 //TODO: finish this
 switch (state){
   case state.STAND: playerStand() ; break;
+  case state.MOVE: playerMove();
 }
 
 //setting the variables for the next tick, this MUST be at the end of the step event!
