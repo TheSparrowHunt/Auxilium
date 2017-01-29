@@ -30,13 +30,18 @@
         <script>scripts\checkInput.gml</script>
         <script>scripts\initInput.gml</script>
       </scripts>
+      <script>scripts\clearDraw.gml</script>
     </scripts>
-    <script>scripts\clearDraw.gml</script>
-    <script>scripts\playerCreator.gml</script>
-    <script>scripts\playerStand.gml</script>
+    <scripts name="Player">
+      <script>scripts\playerCreator.gml</script>
+      <script>scripts\stateTest.gml</script>
+      <script>scripts\fullStateChange.gml</script>
+      <script>scripts\playerDirection.gml</script>
+      <script>scripts\playerStand.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <objects name="utility">
+    <objects name="Utility">
       <object>objects\obj_preTotalInit</object>
       <object>objects\obj_totalInit</object>
       <object>objects\obj_control</object>

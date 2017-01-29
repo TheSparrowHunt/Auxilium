@@ -26,3 +26,13 @@ previousDirectionState = directionState.DOWN;
 
 canMove = true;
 previousState = state.STAND;
+
+//length of attack in ticks
+attackLength = 15;
+//length of playing an alert
+alertLength = 15;
+//counters for interactions
+//counters must be initialised greater than the Length for the state machine to initialise properly
+attackCounter = 16;
+alertCounter = 16;
+

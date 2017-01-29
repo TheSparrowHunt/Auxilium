@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//calls the initInput script to initialise all the variables
 initInput();
+global.tick = 0;
 </string>
           </argument>
         </arguments>
@@ -51,6 +52,8 @@ initInput();
             <kind>1</kind>
             <string>//calls the check input script to update the global input variables
 checkInput();
+//increases the global counter
+global.tick++;
 </string>
           </argument>
         </arguments>

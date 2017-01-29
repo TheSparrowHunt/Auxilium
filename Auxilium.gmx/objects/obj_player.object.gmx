@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>playerCreator();
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -48,12 +49,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (state){
-  case state.STAND: playerStand(); break;
-  
+            <string>playerDirection();
+stateTest();
+//switch and case for behaviour.
+//TODO: finish this
+switch (state){
+  case state.STAND: playerStand() ; break;
 }
 
+//setting the variables for the next tick, this MUST be at the end of the step event!
 previousState = state;
+previousDirectionState = directionState;
 </string>
           </argument>
         </arguments>
@@ -77,6 +83,9 @@ previousState = state;
           <argument>
             <kind>1</kind>
             <string>draw_self();
+draw_text(x, y - 30, string(state));
+draw_text(x, y - 20, string(directionState));
+clearDraw();
 </string>
           </argument>
         </arguments>

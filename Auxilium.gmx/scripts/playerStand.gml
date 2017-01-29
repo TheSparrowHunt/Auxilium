@@ -9,7 +9,9 @@ switch(directionState){
     case directionState.DOWNLEFT:  sprite_index = spr_playerStandDownRight; image_xscale = -1; break;
     case directionState.DOWNRIGHT: sprite_index = spr_playerStandDownRight; image_xscale =  1; break;
 }
-
+if (image_speed != 1/3){
+  image_speed = 1/3;
+}
 //if the player wasn't standing on thew last frame
 if (previousState != state.STAND){
   image_index = 0;
@@ -18,13 +20,4 @@ if (previousState != state.STAND){
 else if (directionState != previousDirectionState){
   image_index = 0;
 }
-//if the player is facing the same direction
-else{
-  //increase the index of the frame
-  image_index++;
-  //if the image index is now over the number of frames in the animation
-  if (image_index > image_number-1){
-    //set it to zero
-    image_index = 0;
-  }
-}
+
