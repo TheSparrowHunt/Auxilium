@@ -104,7 +104,6 @@ switch (camState){
 
 //self explanitory
 updateCamera();
-
 </string>
           </argument>
         </arguments>

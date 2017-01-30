@@ -48,25 +48,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(  0,  0, "UP: "   + string(global.up)   );
-draw_text(  0, 10, "DOWN: " + string(global.down) );
-draw_text(  0, 20, "LEFT: " + string(global.left) );
-draw_text(  0, 30, "RIGHT: "+ string(global.right));
-draw_text(  0, 40, "FACE0: "+ string(global.face0));
-draw_text(  0, 50, "FACE1: "+ string(global.face1));
-draw_text(  0, 60, "FACE2: "+ string(global.face2));
-draw_text(  0, 70, "FACE3: "+ string(global.face3));
-draw_text(  0, 80, "START: "+ string(global.start));
+            <string>if (global.debug){
+    draw_text(  0,  0, "UP: "   + string(global.up)   );
+    draw_text(  0, 10, "DOWN: " + string(global.down) );
+    draw_text(  0, 20, "LEFT: " + string(global.left) );
+    draw_text(  0, 30, "RIGHT: "+ string(global.right));
+    draw_text(  0, 40, "FACE0: "+ string(global.face0));
+    draw_text(  0, 50, "FACE1: "+ string(global.face1));
+    draw_text(  0, 60, "FACE2: "+ string(global.face2));
+    draw_text(  0, 70, "FACE3: "+ string(global.face3));
+    draw_text(  0, 80, "START: "+ string(global.start));
 
-draw_text(  0, 90, "UP: "   + string(global.upPressed));
-draw_text(  0,100, "DOWN: " + string(global.downPressed));
-draw_text(  0,110, "LEFT: " + string(global.leftPressed) );
-draw_text(  0,120, "RIGHT: "+ string(global.rightPressed));
-draw_text(  0,130, "FACE0: "+ string(global.face0Pressed));
-draw_text(  0,140, "FACE1: "+ string(global.face1Pressed));
-draw_text(  0,150, "FACE2: "+ string(global.face2Pressed));
-draw_text(  0,160, "FACE3: "+ string(global.face3Pressed));
-draw_text(  0,170, "START: "+ string(global.startPressed));
+    draw_text(  0, 90, "UP: "   + string(global.upPressed));
+    draw_text(  0,100, "DOWN: " + string(global.downPressed));
+    draw_text(  0,110, "LEFT: " + string(global.leftPressed) );
+    draw_text(  0,120, "RIGHT: "+ string(global.rightPressed));
+    draw_text(  0,130, "FACE0: "+ string(global.face0Pressed));
+    draw_text(  0,140, "FACE1: "+ string(global.face1Pressed));
+    draw_text(  0,150, "FACE2: "+ string(global.face2Pressed));
+    draw_text(  0,160, "FACE3: "+ string(global.face3Pressed));
+    draw_text(  0,170, "START: "+ string(global.startPressed));
+}
 clearDraw();
 </string>
           </argument>

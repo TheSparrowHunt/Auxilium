@@ -40,7 +40,7 @@ if (global.started == false){
     global.screenHeight = 270;
     
     //sets the multiplier for the resolution (to keep a 1:1 pixel ratio when scaled)
-    global.screenMultiplier = 2;
+    global.screenMultiplier = 1;
     
     //self explanitory
     global.fullscreen = false;
@@ -53,7 +53,7 @@ if (global.started == false){
     global.started = true;
     
     //to enable debug features
-    global.debug = false;
+    global.debug = true;
     
     //this runs my custom script that loads and sets our default font and colour palette
     setGlobalFontAndColours();

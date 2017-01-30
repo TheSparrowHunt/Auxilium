@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>if (global.fullscreen == false){
     window_set_fullscreen(false);
+    testWindow();
     window_set_size(global.screenWidth*global.screenMultiplier, global.screenHeight*global.screenMultiplier);
     alarm[1] = 1;
 }
