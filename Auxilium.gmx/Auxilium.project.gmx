@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -35,19 +36,26 @@
       </scripts>
       <script>scripts\clearDraw.gml</script>
     </scripts>
-    <scripts name="Player">
-      <script>scripts\playerCreator.gml</script>
-      <script>scripts\stateTest.gml</script>
-      <script>scripts\fullStateChange.gml</script>
-      <script>scripts\playerDirection.gml</script>
-      <script>scripts\playerStand.gml</script>
+    <scripts name="Camera">
+      <script>scripts\camListen.gml</script>
+      <script>scripts\camFollow.gml</script>
+      <script>scripts\camListenRegular.gml</script>
+      <script>scripts\updateCamera.gml</script>
+      <script>scripts\initCamera.gml</script>
     </scripts>
-    <script>scripts\initCamera.gml</script>
-    <script>scripts\updateCamera.gml</script>
-    <script>scripts\playerMove.gml</script>
-    <script>scripts\camListen.gml</script>
-    <script>scripts\camFollow.gml</script>
-    <script>scripts\camListenRegular.gml</script>
+    <scripts name="Entities">
+      <scripts name="Player">
+        <script>scripts\playerCreator.gml</script>
+        <script>scripts\stateTest.gml</script>
+        <script>scripts\fullStateChange.gml</script>
+        <script>scripts\playerDirection.gml</script>
+        <script>scripts\playerStand.gml</script>
+        <script>scripts\playerMove.gml</script>
+      </scripts>
+      <script>scripts\collisionCheck.gml</script>
+      <script>scripts\setDrawPosition.gml</script>
+      <script>scripts\solidMovesCreate.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Utility">

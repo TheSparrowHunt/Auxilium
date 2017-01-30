@@ -1,14 +1,35 @@
-//TEMPORARY, for god's sake remember to change this for collision detection and
-//moving the same amount regardless of direction!
-if (global.up){
-    y-=1;
+movex = 0;
+movey = 0;
+//Moving the same amount regardless of direction!
+if (directionState == directionState.UPLEFT){
+    movex=-sqrt(0.5*spd);
+    movey=-sqrt(0.5*spd);
 }
-if (global.down){
-    y+=1;
+
+if (directionState == directionState.UPRIGHT){
+    movex=+sqrt(0.5*spd);
+    movey=-sqrt(0.5*spd);
 }
-if (global.left){
-    x-=1;
+
+if (directionState == directionState.DOWNLEFT){
+    movex=-sqrt(0.5*spd);
+    movey=+sqrt(0.5*spd);
 }
-if (global.right){
-    x+=1;
+
+if (directionState == directionState.DOWNRIGHT){
+    movex=+sqrt(0.5*spd);
+    movey=+sqrt(0.5*spd);
 }
+if (directionState == directionState.UP){
+    movey=-spd;
+}
+if (directionState == directionState.DOWN){
+     movey=+spd;
+}
+if (directionState == directionState.LEFT){
+     movex=-spd;
+}
+if (directionState == directionState.RIGHT){
+    movex=+spd;
+}
+collisionCheck();
