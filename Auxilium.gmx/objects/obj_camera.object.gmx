@@ -103,6 +103,7 @@ switch (camState){
 }
 
 //self explanitory
+testWindow();
 updateCamera();
 </string>
           </argument>
@@ -126,7 +127,12 @@ updateCamera();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(  0,300, "X: "+ string(x));
+            <string>draw_text(0, 250, "WindowWidth: "+ string(window_get_width()));
+draw_text(0, 260, "WindowHeight: "+ string(window_get_height()));
+draw_text(0, 270, "screenMultiplier: "+ string(global.screenMultiplier));
+draw_text(0, 280, "screenWidth: "+ string(global.screenWidth));
+draw_text(0, 290, "screenHeight: "+ string(global.screenHeight));
+draw_text(  0,300, "X: "+ string(x));
 draw_text(  0,310, "Y: "+ string(y));
 draw_text(  0,320, "view_wport: "+ string(view_wport[0]));
 draw_text(  0,330, "view_hport: "+ string(view_hport[0]));

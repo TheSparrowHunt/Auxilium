@@ -34,6 +34,12 @@ if (global.started == false){
     //change the following if you want to mess around with scaling
     
     //screen width in in-game pixels
+    global.defaultWidth = 640;
+    
+    //screen height in in-game pixels
+    global.defaultHeight = 360;
+    
+    //screen width in in-game pixels
     global.screenWidth = 480;
     
     //screen height in in-game pixels
@@ -43,7 +49,7 @@ if (global.started == false){
     global.screenMultiplier = 1;
     
     //self explanitory
-    global.fullscreen = false;
+    global.fullscreen = true;
     
     //I use volume on a scale between 0 and 100, then divide it by 100 when setting the volume
     //the reason for this is GameMaker's floating point is prone to precision errors
