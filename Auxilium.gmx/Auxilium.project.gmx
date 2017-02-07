@@ -16,6 +16,13 @@
           <sprite>sprites\spr_playerStandUpRight</sprite>
           <sprite>sprites\spr_playerStandDownRight</sprite>
         </sprites>
+        <sprites name="Walking">
+          <sprite>sprites\spr_playerWalkDown</sprite>
+          <sprite>sprites\spr_playerWalkUpRight</sprite>
+          <sprite>sprites\spr_playerWalkDownRight</sprite>
+          <sprite>sprites\spr_playerWalkUp</sprite>
+          <sprite>sprites\spr_playerWalkRight</sprite>
+        </sprites>
       </sprites>
       <sprites name="Environment">
         <sprite>sprites\spr_cactus</sprite>

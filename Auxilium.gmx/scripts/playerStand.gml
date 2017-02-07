@@ -20,4 +20,3 @@ if (previousState != state.STAND){
 else if (directionState != previousDirectionState){
   image_index = 0;
 }
-
