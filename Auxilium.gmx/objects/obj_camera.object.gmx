@@ -102,8 +102,11 @@ switch (camState){
     case camState.LISTENFOLLOW: camListen(true); break;
 }
 
-//self explanitory
-testWindow();
+//if the window size has changed 
+if (window_get_width()*window_get_height() != global.previousWindowSize){
+    screenResized();
+}
+
 updateCamera();
 </string>
           </argument>

@@ -56,7 +56,7 @@
       <script>scripts\setDrawPosition.gml</script>
       <script>scripts\solidMovesCreate.gml</script>
     </scripts>
-    <script>scripts\testWindow.gml</script>
+    <script>scripts\screenResized.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Utility">

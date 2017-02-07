@@ -49,7 +49,7 @@ if (global.started == false){
     global.screenMultiplier = 1;
     
     //self explanitory
-    global.fullscreen = true;
+    global.fullscreen = false;
     
     //I use volume on a scale between 0 and 100, then divide it by 100 when setting the volume
     //the reason for this is GameMaker's floating point is prone to precision errors
@@ -60,6 +60,9 @@ if (global.started == false){
     
     //to enable debug features
     global.debug = true;
+    
+    //to run the screenResized code
+    global.previousWindowSize = window_get_width()*window_get_height();
     
     //this runs my custom script that loads and sets our default font and colour palette
     setGlobalFontAndColours();
