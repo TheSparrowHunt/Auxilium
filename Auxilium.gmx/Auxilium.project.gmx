@@ -72,6 +72,7 @@
     <script>scripts\path_find.gml</script>
     <script>scripts\create_global_grid.gml</script>
     <script>scripts\update_grid.gml</script>
+    <script>scripts\pathCollisionCheck.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Utility">
@@ -91,6 +92,7 @@
       <object>objects\obj_entity</object>
       <objects name="Solid">
         <object>objects\obj_solid</object>
+        <object>objects\obj_solidForPathFinding</object>
         <objects name="Static">
           <object>objects\obj_cactus0</object>
         </objects>

@@ -7,4 +7,4 @@ mp_grid_add_instances(path, obj_solid, 1);
 //generates the path from the grid
 mp_grid_path(grid, path, x, y, obj_player.x, obj_player.y, true);
 //start the path
-path_start(path, 1, "", true);
+//path_start(path, 1, "", true);
