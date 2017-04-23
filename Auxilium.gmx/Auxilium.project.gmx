@@ -71,6 +71,9 @@
     </scripts>
     <script>scripts\screenResized.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\testShader.shader</shader>
+  </shaders>
   <objects name="objects">
     <objects name="Utility">
       <object>objects\obj_preTotalInit</object>
