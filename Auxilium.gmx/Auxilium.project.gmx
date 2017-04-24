@@ -26,16 +26,22 @@
       </sprites>
       <sprites name="Environment">
         <sprite>sprites\spr_cactus</sprite>
+        <sprite>sprites\spr_moun</sprite>
+        <sprite>sprites\spr_endMoun</sprite>
       </sprites>
       <sprites name="Giants">
         <sprites name="TheGoodOne">
           <sprite>sprites\spr_giantMain</sprite>
         </sprites>
       </sprites>
+      <sprites name="test">
+        <sprite>sprites\spr_warp</sprite>
+      </sprites>
     </sprites>
     <sprites name="fonts">
       <sprite>sprites\spr_font</sprite>
     </sprites>
+    <sprite>sprites\sprite12</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -74,6 +80,9 @@
     <script>scripts\update_grid.gml</script>
     <script>scripts\pathCollisionCheck.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\testShader.shader</shader>
+  </shaders>
   <objects name="objects">
     <objects name="Utility">
       <object>objects\obj_preTotalInit</object>
@@ -87,6 +96,7 @@
       <objects name="LevelManagement">
         <object>objects\obj_gridManager</object>
       </objects>
+      <object>objects\obj_warp</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_entity</object>
@@ -95,6 +105,8 @@
         <object>objects\obj_solidForPathFinding</object>
         <objects name="Static">
           <object>objects\obj_cactus0</object>
+          <object>objects\obj_moun</object>
+          <object>objects\obj_endMoun</object>
         </objects>
         <objects name="Moves">
           <object>objects\obj_moves</object>
@@ -114,6 +126,7 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_town</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
