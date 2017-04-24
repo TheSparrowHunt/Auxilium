@@ -83,6 +83,9 @@ clearDraw();
 //runs the code in alarm[0] in 15 ticks
 alarm[0] = 15;
 
+//sets the potential settings for pathfinding
+mp_potential_settings(2, 1, 5, true);
+
 
 
 </string>

@@ -1,5 +1,5 @@
 //creating a map grid for the whole map to pathfind on
-grid = mp_grid_create(0,0, room_width/64, room_height/64, 64, 64);
+grid = mp_grid_create(0,0, room_width/32, room_height/32, 32, 32);
 //new path
 path = path_add();
 //adds the instances of type obj_solid (and its children) to the grid

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_global_grid();
+            <string>//create_global_grid();
 </string>
           </argument>
         </arguments>

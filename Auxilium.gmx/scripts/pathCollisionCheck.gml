@@ -1,4 +1,4 @@
-movex = path_get_x(path,0);
+/*movex = path_get_x(path,0);
 movey = path_get_y(path,0);
 newx = previousx;
 newy = previousy;
@@ -21,4 +21,4 @@ x = newx;
 y = newy;
 
 previousx = x;
-previousy = y;
+previousy = y;*/

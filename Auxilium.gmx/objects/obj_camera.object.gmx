@@ -130,7 +130,7 @@ updateCamera();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 250, "WindowWidth: "+ string(window_get_width()));
+            <string>/*draw_text(0, 250, "WindowWidth: "+ string(window_get_width()));
 draw_text(0, 260, "WindowHeight: "+ string(window_get_height()));
 draw_text(0, 270, "screenMultiplier: "+ string(global.screenMultiplier));
 draw_text(0, 280, "screenWidth: "+ string(global.screenWidth));
@@ -142,7 +142,7 @@ draw_text(  0,330, "view_hport: "+ string(view_hport[0]));
 draw_text(  0,340, "view_wview: "+ string(view_wview[0]));
 draw_text(  0,350, "view_hview: "+ string(view_hview[0]));
 draw_text(  0,360, "view_xport: "+ string(view_xport[0]));
-draw_text(  0,370, "view_yport: "+ string(view_yport[0]));
+draw_text(  0,370, "view_yport: "+ string(view_yport[0]));*/
 clearDraw();
 </string>
           </argument>
