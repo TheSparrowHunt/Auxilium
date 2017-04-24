@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_moves</parentName>
+  <parentName>obj_solidForPathFinding</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>solidMovesCreate();
 playerCreator();
 image_speed = 0;
 //with the camera object
@@ -76,6 +76,9 @@ previousDirectionState = directionState;
 
 //runs the inherited step too
 event_inherited();
+
+//sets draw position
+setDrawPosition();
 </string>
           </argument>
         </arguments>

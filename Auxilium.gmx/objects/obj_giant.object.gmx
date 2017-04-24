@@ -32,6 +32,8 @@ path = path_add();
 
 previousx = x;
 previousy = y;
+
+objFollowing = obj_player;
 </string>
           </argument>
         </arguments>
@@ -65,7 +67,7 @@ previousy = y;
 else{
     path_start(path,0, path_action_stop, false);
 }*/
-if (distance_to_object(obj_player) &gt; 24){
+if (distance_to_object(objFollowing) &gt; 24){
     /*update_grid();
     if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1)){
         path_start(path, 1, path_action_stop, false);
@@ -75,7 +77,7 @@ if (distance_to_object(obj_player) &gt; 24){
     //mp_potential_step_object(obj_player.x, obj_player.y, 0.5, obj_solidForPathFinding);
     //0,0
     //if it can't make a path to the player
-    mp_potential_path_object(path, obj_player.x, obj_player.y, 16, 8, obj_solidForPathFinding)
+    mp_potential_path_object(path, objFollowing.x, objFollowing.y, 16, 8, obj_solidForPathFinding)
     path_start(path, 1, path_action_stop, false);
 }
 else{

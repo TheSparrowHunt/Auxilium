@@ -54,6 +54,16 @@ global.tick = 0;
 checkInput();
 //increases the global counter
 global.tick++;
+
+//DEBUG
+//example of setting the giant to follow any other object, player is default. 
+/*if(keyboard_check_pressed(ord('1'))){
+    if(object_exists(obj_giant)){
+        with(obj_giant){
+            objFollowing = obj_cactus0;
+        }
+    }
+}*/
 </string>
           </argument>
         </arguments>

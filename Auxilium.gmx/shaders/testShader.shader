@@ -40,7 +40,7 @@ void main()
     vec4 test = vec4(1.0,1.0,1.0,1.0);
     float testCircle = circle(vec2(0.5, 0.5), 1.);
     vec4 passThrough = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
-    gl_FragColor = vec4(testCircle, passThrough.yzw);
-    //gl_FragColor = test;
+    //gl_FragColor = vec4(testCircle, passThrough.yzw);
+    gl_FragColor = passThrough;
 }
 
