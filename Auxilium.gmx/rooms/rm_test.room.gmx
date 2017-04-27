@@ -80,6 +80,7 @@
     <instance objName="obj_cactus0" x="520" y="168" name="inst_5871B399" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cactus0" x="520" y="152" name="inst_547D8ECC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cactus0" x="520" y="136" name="inst_DA74BA32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_0" x="392" y="64" name="inst_B04D3FF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

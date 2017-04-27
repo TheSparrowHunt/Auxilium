@@ -28,6 +28,7 @@
         <sprite>sprites\spr_cactus</sprite>
         <sprite>sprites\spr_moun</sprite>
         <sprite>sprites\spr_endMoun</sprite>
+        <sprite>sprites\spr_rock_0</sprite>
       </sprites>
       <sprites name="Giants">
         <sprites name="TheGoodOne">
@@ -107,6 +108,7 @@
           <object>objects\obj_cactus0</object>
           <object>objects\obj_moun</object>
           <object>objects\obj_endMoun</object>
+          <object>objects\obj_rock_0</object>
         </objects>
         <objects name="Moves">
           <object>objects\obj_moves</object>
