@@ -82,6 +82,8 @@
     <script>scripts\update_grid.gml</script>
     <script>scripts\pathCollisionCheck.gml</script>
     <script>scripts\entity_draw.gml</script>
+    <script>scripts\draw_shadow.gml</script>
+    <script>scripts\giveShadowData.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\testShader.shader</shader>
@@ -126,6 +128,9 @@
       </objects>
     </objects>
     <object>objects\obj_tester</object>
+    <objects name="Visuals">
+      <object>objects\obj_shadow</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>

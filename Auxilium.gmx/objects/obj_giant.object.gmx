@@ -56,11 +56,9 @@ objFollowing = obj_player;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-
-if (distance_to_object(objFollowing) &gt; 24){
+            <string>if (distance_to_object(objFollowing) &gt; 24){
     //making a path to the player
-    mp_potential_path_object(path, objFollowing.x, objFollowing.y, 16, 8, obj_solidForPathFinding)
+    mp_potential_path_object(path, objFollowing.x, objFollowing.y, 16, 8, obj_solidForPathFinding);
     path_start(path, 1, path_action_stop, false);
 }
 else{
@@ -70,8 +68,9 @@ else{
 /*if ((direction - 45) &gt; ){
     
 }*/
-image_angle = direction;
-show_debug_message(direction);
+//image_angle = direction;
+event_inherited();
+//giveShadowData();
 </string>
           </argument>
         </arguments>
@@ -94,7 +93,7 @@ show_debug_message(direction);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>event_inherited();
 
 //draw_path(path, x, y, true);
 </string>

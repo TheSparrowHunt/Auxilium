@@ -5,3 +5,4 @@
 draw_set_font(global.font0);
 draw_set_halign(fa_left);
 draw_set_color(global.white);
+draw_set_alpha(1);

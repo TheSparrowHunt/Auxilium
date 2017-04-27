@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>height = 0;
+myShadow = instance_create(x, y, obj_shadow);
+giveShadowData();
 </string>
           </argument>
         </arguments>
@@ -52,6 +54,7 @@
 //depth in gamemaker is a higher depth is lower back
 //and lower depth (including negative) is further forward
 depth = -y;
+giveShadowData();
 </string>
           </argument>
         </arguments>
