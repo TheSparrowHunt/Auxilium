@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>solidMovesCreate();
+            <string>event_inherited();
+solidMovesCreate();
 playerCreator();
 image_speed = 0;
 //with the camera object
@@ -58,9 +59,7 @@ with(obj_camera){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-playerDirection();
+            <string>playerDirection();
 stateTest();
 //switch and case for behaviour.
 //TODO: finish this

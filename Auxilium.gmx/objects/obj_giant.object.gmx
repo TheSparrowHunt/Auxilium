@@ -58,31 +58,20 @@ objFollowing = obj_player;
             <kind>1</kind>
             <string>event_inherited();
 
-/*if(abs(x-obj_player.x)+abs(y-obj_player.y) &gt; 72){
-    update_grid();
-    if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1)){
-        path_start(path, 1, path_action_stop, false);
-    }
-}
-else{
-    path_start(path,0, path_action_stop, false);
-}*/
 if (distance_to_object(objFollowing) &gt; 24){
-    /*update_grid();
-    if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1)){
-        path_start(path, 1, path_action_stop, false);
-    }
-    
-    pathCollisionCheck();*/
-    //mp_potential_step_object(obj_player.x, obj_player.y, 0.5, obj_solidForPathFinding);
-    //0,0
-    //if it can't make a path to the player
+    //making a path to the player
     mp_potential_path_object(path, objFollowing.x, objFollowing.y, 16, 8, obj_solidForPathFinding)
     path_start(path, 1, path_action_stop, false);
 }
 else{
     path_end();
 }
+
+/*if ((direction - 45) &gt; ){
+    
+}*/
+image_angle = direction;
+show_debug_message(direction);
 </string>
           </argument>
         </arguments>

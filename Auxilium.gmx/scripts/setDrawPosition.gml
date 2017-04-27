@@ -1,2 +1,2 @@
 drawx = round(x);
-drawy = round(y);
+drawy = round(y-height);

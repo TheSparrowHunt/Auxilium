@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>solidMovesCreate();
+            <string>event_inherited();
+solidMovesCreate();
 </string>
           </argument>
         </arguments>
