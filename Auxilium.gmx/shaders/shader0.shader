@@ -1,8 +1,8 @@
- //
+//
 // Simple passthrough vertex shader
 //
 attribute vec3 in_Position;                  // (x,y,z)
-//attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.
+//attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.	
 attribute vec4 in_Colour;                    // (r,g,b,a)
 attribute vec2 in_TextureCoord;              // (u,v)
 
@@ -24,23 +24,8 @@ void main()
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
-uniform vec2 resolution;
-float circle(vec2 pos, float size){
-    size  = 1./size;
-    size *= 10.;
-    
-    float aspect = resolution.x/resolution.y;
-    vec2 normCoord = vec2((gl_FragCoord.x/resolution.x)*aspect, (gl_FragCoord.y/resolution.y));
-    float colour = distance(normCoord, pos);
-    
-    return smoothstep(colour * size, colour * size + 0.02, 1.);
-}
 void main()
 {
-    vec4 test = vec4(1.0,1.0,1.0,1.0);
-    float testCircle = circle(vec2(0.5, 0.5), 1.);
-    vec4 passThrough = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
-    //gl_FragColor = vec4(testCircle, passThrough.yzw);
-    gl_FragColor = passThrough;
+    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 }
 
