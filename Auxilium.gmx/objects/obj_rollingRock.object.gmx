@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>event_inherited();
 height = 0;
-//spd = 0;
-//vel=0;
-//rot = 0;
+rspeed = 5; //the speed of rotation, how fast it rotates
+Point_dir = 0; //the variable that will store what direction to rotate to
+
+vel=0.7; //the initial speed of movement
 
 
 </string>
@@ -54,18 +55,18 @@ height = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if (distance_to_object(obj_player) &lt; 1){
-    //direction += 5;
-    movex = 0.3;
-    movey = 0;
-    image_angle = point_direction(x, y, 0, 0);
-    
-//}
-   /* if (spd == 0) {
-        vel = 10;
-    }
-    y += vel;
-}*/
+            <string>movex = vel; // move x with velocity speed
+movey = 0; //static y
+vel -= 0.001; // 
+rspeed -= 0.01;
+if (vel &lt;= 0.05 || rspeed &lt;= 0.5) {
+    vel = 0;
+    rspeed = 0;
+}
+Point_dir = image_angle + 90; //the angle to rotate to, add 90 degrees to current angle
+
+image_angle -= sin(degtorad(Point_dir - image_angle))*rspeed;
+
 collisionCheck();
 event_inherited();
 
