@@ -113,6 +113,29 @@ updateCamera();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>initCamera();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="77">
       <action>
         <libid>1</libid>
@@ -152,7 +175,7 @@ updateCamera();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 250, "WindowWidth: "+ string(window_get_width()));
+            <string>/*draw_text(0, 250, "WindowWidth: "+ string(window_get_width()));
 draw_text(0, 260, "WindowHeight: "+ string(window_get_height()));
 draw_text(0, 270, "screenMultiplier: "+ string(global.screenMultiplier));
 draw_text(0, 280, "screenWidth: "+ string(global.screenWidth));
@@ -165,7 +188,7 @@ draw_text(  0,340, "view_wview: "+ string(view_wview[0]));
 draw_text(  0,350, "view_hview: "+ string(view_hview[0]));
 draw_text(  0,360, "view_xport: "+ string(view_xport[0]));
 draw_text(  0,370, "view_yport: "+ string(view_yport[0]));
-clearDraw();
+clearDraw();*/
 
 //postprocessing
 shader_set(testShader);
