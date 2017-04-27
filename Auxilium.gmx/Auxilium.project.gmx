@@ -43,6 +43,7 @@
       <sprite>sprites\spr_font</sprite>
     </sprites>
     <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\spr_0Size</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

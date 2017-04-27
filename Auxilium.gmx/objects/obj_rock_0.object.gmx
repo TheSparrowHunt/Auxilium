@@ -28,6 +28,13 @@
             <string>event_inherited();
 
 height = 200;
+
+active = false;
+
+mask_index = spr_0Size;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -50,11 +57,23 @@ height = 200;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (distance_to_object(obj_player) &lt; 30 &amp;&amp; height &gt; 0) {
-    height -= 1;
+            <string>//if not activated yet
+if (!active){
+    if (distance_to_object(obj_player) &lt; 30){
+        active = true;
+    }
 }
-else if (height &lt;= 0){
-    
+else{
+    //if not on the ground yet
+    if (height &gt; 0) {
+        height -= 1;
+    }
+    else if (height &lt;= 0){
+        //basically sets collisions on
+        if (mask_index != spr_rock_0){
+            mask_index = spr_rock_0;
+        }
+    }
 }
 
 event_inherited();
@@ -80,7 +99,7 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>entity_draw();
+            <string>event_inherited();
 </string>
           </argument>
         </arguments>

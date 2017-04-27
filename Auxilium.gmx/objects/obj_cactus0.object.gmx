@@ -50,8 +50,6 @@ image_speed = 0.2;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-draw_self();
-clearDraw();
 </string>
           </argument>
         </arguments>
