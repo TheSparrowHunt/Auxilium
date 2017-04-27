@@ -111,6 +111,7 @@
           <object>objects\obj_moun</object>
           <object>objects\obj_endMoun</object>
           <object>objects\obj_rock_0</object>
+          <object>objects\obj_rollingRock</object>
         </objects>
         <objects name="Moves">
           <object>objects\obj_moves</object>
