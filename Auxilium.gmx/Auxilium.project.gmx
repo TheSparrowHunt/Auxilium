@@ -126,6 +126,7 @@
           <objects name="Player">
             <object>objects\obj_player</object>
           </objects>
+          <object>objects\obj_moveableRock</object>
         </objects>
       </objects>
     </objects>

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_solidForPathFinding</parentName>
+  <parentName>obj_moves</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,12 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-//height = 0;
-rspeed = 5; //the speed of rotation, how fast it rotates
-Point_dir = 0; //the variable that will store what direction to rotate to
+solidMovesCreate();
 
-vel=0.7; //the initial speed of movement
+movecounter = 0;
+previousmovex = 0;
+previousmovey = 0;
 
+//Point_dir;
 
 </string>
           </argument>
@@ -55,22 +56,47 @@ vel=0.7; //the initial speed of movement
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movex = vel; // move x with velocity speed
-movey = 0; //static y
-vel -= 0.001; // 
-rspeed -= 0.01;
-if (vel &lt;= 0.05 || rspeed &lt;= 0.5) {
-    vel = 0;
-    rspeed = 0;
+            <string>movex = 0;
+movey = 0;
+
+tmpSprWidth = sprite_get_width(sprite_index)/2;
+
+tmpSprHeight = sprite_get_height(sprite_index)/2;
+
+if place_meeting(x-1, y, obj_player) {
+    with (obj_player) {
+        if (movex &gt; 0) {
+            other.movex = movex;
+        }
+    }
 }
-Point_dir = image_angle + 90; //the angle to rotate to, add 90 degrees to current angle
+if place_meeting(x+1, y, obj_player) {
+    with (obj_player) {
+        if (movex &lt; 0) {
+            other.movex = movex;
+        }
+    }
+}
+if place_meeting(x, y-1, obj_player) {
+    with (obj_player) {
+        if (movey &gt; 0) {
+            other.movey = movey;
+        }
+    }
+}
+if place_meeting(x, y+1, obj_player) {
+    with (obj_player) {
+        if (movey &lt; 0) {
+            other.movey = movey;
+        }
+    }
+}
 
-image_angle -= sin(degtorad(Point_dir - image_angle))*rspeed;
-
+rspeed = 5;
+previousmovex = movex;
+previousmovey = movey;
 collisionCheck();
 event_inherited();
-
-
 </string>
           </argument>
         </arguments>

@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-//height = 0;
-rspeed = 5; //the speed of rotation, how fast it rotates
-Point_dir = 0; //the variable that will store what direction to rotate to
+            <string>/*
+event_inherited();
+//solidMovesCreate();
+rspeedx = movex;
+rspeedy = movey;
 
-vel=0.7; //the initial speed of movement
-
-
+velx = movex;
+vely = movey;*/
 </string>
           </argument>
         </arguments>
@@ -55,22 +55,16 @@ vel=0.7; //the initial speed of movement
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movex = vel; // move x with velocity speed
-movey = 0; //static y
-vel -= 0.001; // 
-rspeed -= 0.01;
-if (vel &lt;= 0.05 || rspeed &lt;= 0.5) {
-    vel = 0;
-    rspeed = 0;
+            <string>
+/*
+if place_meeting(x , y, obj_player) {
+    with (obj_movableRock) {
+        movex = movex;
+        movey = movey;
+    }
 }
-Point_dir = image_angle + 90; //the angle to rotate to, add 90 degrees to current angle
-
-image_angle -= sin(degtorad(Point_dir - image_angle))*rspeed;
-
 collisionCheck();
-event_inherited();
-
-
+event_inherited();*/
 </string>
           </argument>
         </arguments>
@@ -93,7 +87,7 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>//event_inherited();
 </string>
           </argument>
         </arguments>
