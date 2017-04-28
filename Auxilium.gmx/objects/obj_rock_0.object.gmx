@@ -73,6 +73,8 @@ else{
         if (mask_index != spr_rock_0){
             mask_index = spr_rock_0;
         }
+        instance_create(x, y, obj_moveableRock);
+        instance_destroy();
     }
 }
 
