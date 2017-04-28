@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_solidForPathFinding</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_0Size</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -26,13 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-//height = 0;
+height = 100;
+deltaheight = 0.0;
+deltadeltaheight = 0.5;
 rspeed = 5; //the speed of rotation, how fast it rotates
 Point_dir = 0; //the variable that will store what direction to rotate to
 
 vel=0.7; //the initial speed of movement
 
-
+bounceState = true; 
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,43 @@ vel=0.7; //the initial speed of movement
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movex = vel; // move x with velocity speed
+            <string>if (bounceState){
+    deltaheight += deltadeltaheight;
+    height -= deltaheight;
+    
+    if (height &lt;= 0){
+        deltaheight = -deltaheight;
+        deltaheight *= 0.9;
+        //if absolute val of deltaheight is less than
+        if (abs(deltaheight) &lt;= 1.0){
+            height = 0;
+            //stop bouncing, just roll
+            bounceState = false;
+        }
+    }
+    
+}
+
+//if not on the ground yet
+if (height &gt; 0) {
+    if (mask_index != spr_0Size){
+        mask_index = spr_0Size;
+    }
+}
+else if (height &lt;= 0){
+    //basically sets collisions on
+    if (mask_index != sprite_index){
+        mask_index = sprite_index;
+    }
+    
+    if (place_meeting(x, y, obj_player)){
+        room_restart();
+    }
+}
+
+
+    
+movex = vel; // move x with velocity speed
 movey = 0; //static y
 vel -= 0.001; // 
 rspeed -= 0.01;
@@ -69,8 +107,6 @@ image_angle -= sin(degtorad(Point_dir - image_angle))*rspeed;
 
 collisionCheck();
 event_inherited();
-
-
 </string>
           </argument>
         </arguments>
