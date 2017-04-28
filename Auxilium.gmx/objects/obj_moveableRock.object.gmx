@@ -5,8 +5,8 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_moves</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>obj_solidForPathFinding</parentName>
+  <maskName>spr_rock_0</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -28,11 +28,20 @@
             <string>event_inherited();
 solidMovesCreate();
 
+imgAngle = 0;
+
 movecounter = 0;
 previousmovex = 0;
 previousmovey = 0;
 
-//Point_dir;
+point_dir_r = 0;
+point_dir_d = 270;
+point_dir_l = 180;
+point_dir_u = 90;
+
+rspeedx = 0;
+//rspeedy = 0;
+
 
 </string>
           </argument>
@@ -64,37 +73,66 @@ tmpSprWidth = sprite_get_width(sprite_index)/2;
 tmpSprHeight = sprite_get_height(sprite_index)/2;
 
 if place_meeting(x-1, y, obj_player) {
+    var flag = false;
     with (obj_player) {
         if (movex &gt; 0) {
+            flag = true;
             other.movex = movex;
+            other.rspeedx = movex;
         }
+    }
+    if (flag){
+        point_dir_r = imgAngle + 90;
+        imgAngle -= sin(degtorad(point_dir_r - imgAngle))*rspeedx;
     }
 }
 if place_meeting(x+1, y, obj_player) {
+    var flag = false;
     with (obj_player) {
         if (movex &lt; 0) {
             other.movex = movex;
+            other.rspeedx = movex;
+            flag = true;
         }
+    }
+    if (flag){
+        point_dir_l = imgAngle + 90;
+        imgAngle -= sin(degtorad(point_dir_l - imgAngle))*rspeedx;
     }
 }
 if place_meeting(x, y-1, obj_player) {
+    var flag = false;
     with (obj_player) {
         if (movey &gt; 0) {
             other.movey = movey;
+            //other.rspeedy = movey;
+            //flag = true;
         }
     }
+    //if (flag){
+      //  point_dir_d = imgAngle + 90;
+        //imgAngle -= sin(degtorad(point_dir_d - imgAngle))*rspeedy;
+    //}
 }
 if place_meeting(x, y+1, obj_player) {
+    var flag = false;
     with (obj_player) {
         if (movey &lt; 0) {
             other.movey = movey;
+            //other.rspeedy = movey;
+            //flag = true;
         }
     }
+    //if (flag){
+       // point_dir_u = imgAngle + 90;
+        //imgAngle -= sin(degtorad(point_dir_u - imgAngle))*rspeedy;
+    //}
 }
 
-rspeed = 5;
 previousmovex = movex;
 previousmovey = movey;
+
+
 collisionCheck();
 event_inherited();
 </string>
@@ -119,7 +157,8 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>draw_sprite_ext(sprite_index, image_index, drawx, drawy, image_xscale, image_yscale, imgAngle, c_white, image_alpha);
+clearDraw();
 </string>
           </argument>
         </arguments>
