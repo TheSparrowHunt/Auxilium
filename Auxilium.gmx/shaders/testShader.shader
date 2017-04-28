@@ -37,10 +37,11 @@ float circle(vec2 pos, float size){
 }
 void main()
 {
-    vec4 test = vec4(1.0,1.0,1.0,1.0);
     float testCircle = circle(vec2(0.5, 0.5), 1.);
     vec4 passThrough = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
+    
     //gl_FragColor = vec4(testCircle, passThrough.yzw);
-    gl_FragColor = passThrough;
+    vec4 bw = vec4(floor(passThrough.x+0.5), floor(passThrough.y+0.5), floor(passThrough.z+0.5), floor(passThrough.w+0.5));
+    gl_FragColor = bw;
 }
 
