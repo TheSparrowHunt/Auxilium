@@ -5,7 +5,14 @@
   </Configs>
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="walkSand">
+      <sound>sound\walk1</sound>
+      <sound>sound\walk2</sound>
+      <sound>sound\walk3</sound>
+      <sound>sound\walk4</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Entities">
       <sprites name="player">
