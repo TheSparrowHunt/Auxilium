@@ -31,6 +31,7 @@
         <sprite>sprites\spr_rock_0</sprite>
         <sprite>sprites\spr_brkWall</sprite>
         <sprite>sprites\spr_circluarRock</sprite>
+        <sprite>sprites\spr_pushableRock</sprite>
       </sprites>
       <sprites name="Giants">
         <sprites name="TheGoodOne">
