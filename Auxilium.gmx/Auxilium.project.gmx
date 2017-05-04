@@ -84,6 +84,8 @@
     <script>scripts\entity_draw.gml</script>
     <script>scripts\draw_shadow.gml</script>
     <script>scripts\giveShadowData.gml</script>
+    <script>scripts\bounce_step.gml</script>
+    <script>scripts\bounce_create.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\testShader.shader</shader>
