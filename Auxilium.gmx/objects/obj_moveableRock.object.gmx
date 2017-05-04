@@ -42,7 +42,8 @@ point_dir_u = 90;
 rspeedx = 0;
 //rspeedy = 0;
 
-
+prevx = x;
+prevy = y;
 </string>
           </argument>
         </arguments>
@@ -72,8 +73,12 @@ tmpSprWidth = sprite_get_width(sprite_index)/2;
 
 tmpSprHeight = sprite_get_height(sprite_index)/2;
 
+//rotation flag
+var flag = false;
+var lFlag = false;
+var rFlag = false;
+
 if place_meeting(x-1, y, obj_player) {
-    var flag = false;
     with (obj_player) {
         if (movex &gt; 0) {
             flag = true;
@@ -83,11 +88,12 @@ if place_meeting(x-1, y, obj_player) {
     }
     if (flag){
         point_dir_r = imgAngle + 90;
-        imgAngle -= sin(degtorad(point_dir_r - imgAngle))*rspeedx;
+        rFlag = true;
+        //imgAngle -= sin(degtorad(point_dir_r - imgAngle))*rspeedx;
     }
 }
+
 if place_meeting(x+1, y, obj_player) {
-    var flag = false;
     with (obj_player) {
         if (movex &lt; 0) {
             other.movex = movex;
@@ -97,11 +103,12 @@ if place_meeting(x+1, y, obj_player) {
     }
     if (flag){
         point_dir_l = imgAngle + 90;
-        imgAngle -= sin(degtorad(point_dir_l - imgAngle))*rspeedx;
+        lFlag = true;
+        //imgAngle -= sin(degtorad(point_dir_l - imgAngle))*rspeedx;
     }
 }
+
 if place_meeting(x, y-1, obj_player) {
-    var flag = false;
     with (obj_player) {
         if (movey &gt; 0) {
             other.movey = movey;
@@ -115,7 +122,6 @@ if place_meeting(x, y-1, obj_player) {
     //}
 }
 if place_meeting(x, y+1, obj_player) {
-    var flag = false;
     with (obj_player) {
         if (movey &lt; 0) {
             other.movey = movey;
@@ -134,6 +140,20 @@ previousmovey = movey;
 
 
 collisionCheck();
+
+//fixes a bug with rotating when not moving
+if (prevx != x){
+    if (lFlag){
+        imgAngle -= 1.0*rspeedx;
+    }
+    if (rFlag){
+        imgAngle -= 1.0*rspeedx;
+    }
+}
+
+//set up for next draw loop
+prevx = x;
+prevy = y;
 event_inherited();
 </string>
           </argument>
