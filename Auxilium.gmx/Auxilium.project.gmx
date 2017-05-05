@@ -63,6 +63,7 @@
     <sprite>sprites\spr_waterRock</sprite>
     <sprite>sprites\spr_endCollect</sprite>
     <sprite>sprites\spr_marker</sprite>
+    <sprite>sprites\spr_kill</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -160,6 +161,7 @@
       <object>objects\obj_shadow</object>
       <object>objects\obj_marker</object>
     </objects>
+    <object>objects\obj_kill</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
@@ -170,6 +172,8 @@
     <room>rooms\rm_test3</room>
     <room>rooms\rm_test4</room>
     <room>rooms\rm_test5</room>
+    <room>rooms\rm_test6</room>
+    <room>rooms\rm_test7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
