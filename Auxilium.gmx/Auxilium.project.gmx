@@ -11,6 +11,7 @@
       <sound>sound\walk2</sound>
       <sound>sound\walk3</sound>
       <sound>sound\walk4</sound>
+      <sound>sound\walkLoop</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
