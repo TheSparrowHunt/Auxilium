@@ -59,7 +59,7 @@ mask_index = spr_0Size;
 
 //if not activated yet
 if (!bounceState){
-    if (distance_to_object(obj_player) &lt; 30){
+    if (distance_to_object(obj_player) &lt; 48){
         bounceState = true;
     }
 }

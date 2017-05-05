@@ -151,8 +151,6 @@
     <instance objName="obj_brkWall" x="320" y="208" name="inst_0366246F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_brkWall" x="192" y="208" name="inst_1467E060" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moveableRock" x="496" y="80" name="inst_DDA3C656" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_EA1CF75E" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_FBF88011" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_moveableRock" x="496" y="96" name="inst_3D7292A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moveableRock" x="496" y="112" name="inst_D5B184D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moveableRock" x="496" y="128" name="inst_72617445" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
