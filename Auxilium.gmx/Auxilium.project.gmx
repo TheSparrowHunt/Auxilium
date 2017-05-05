@@ -60,6 +60,7 @@
     <sprite>sprites\spr_water</sprite>
     <sprite>sprites\spr_8x16</sprite>
     <sprite>sprites\spr_16x8</sprite>
+    <sprite>sprites\spr_waterRock</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -135,6 +136,7 @@
           <object>objects\obj_rollingRock</object>
           <object>objects\obj_brkWall</object>
           <object>objects\obj_water</object>
+          <object>objects\obj_walkableWater</object>
         </objects>
         <objects name="Moves">
           <object>objects\obj_moves</object>
