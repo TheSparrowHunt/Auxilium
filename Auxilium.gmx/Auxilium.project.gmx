@@ -160,7 +160,6 @@
       <object>objects\obj_shadow</object>
       <object>objects\obj_marker</object>
     </objects>
-    <object>objects\obj_levelCollectThing</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
