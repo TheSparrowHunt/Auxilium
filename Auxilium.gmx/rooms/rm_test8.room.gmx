@@ -179,7 +179,6 @@
     <instance objName="obj_water" x="480" y="192" name="inst_B2AE2823" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rollingRock" x="416" y="136" name="inst_62C2E3A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rollingRock" x="416" y="168" name="inst_80293F67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_kill" x="264" y="112" name="inst_B5D284F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moveableRock" x="272" y="152" name="inst_B07ECEAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rollingRock" x="416" y="120" name="inst_8E33A34E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rollingRock" x="416" y="104" name="inst_BA9CA727" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

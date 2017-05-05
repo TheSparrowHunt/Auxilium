@@ -50,7 +50,12 @@ drawy = y;
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x, y, obj_giant)){
-    room_goto_next();
+    if (room_exists(room_next(room))){
+        room_goto_next();
+    }
+    else{
+        room_goto(rm_test);
+    }
 }
 </string>
           </argument>

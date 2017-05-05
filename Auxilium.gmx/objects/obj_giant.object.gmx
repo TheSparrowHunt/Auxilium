@@ -94,8 +94,8 @@ event_inherited();
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-
-draw_path(path, x, y, true);
+//DEBUG
+//draw_path(path, x, y, true);
 </string>
           </argument>
         </arguments>
