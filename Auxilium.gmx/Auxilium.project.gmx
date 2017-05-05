@@ -61,6 +61,8 @@
     <sprite>sprites\spr_8x16</sprite>
     <sprite>sprites\spr_16x8</sprite>
     <sprite>sprites\spr_waterRock</sprite>
+    <sprite>sprites\spr_endCollect</sprite>
+    <sprite>sprites\spr_marker</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -125,6 +127,7 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_entity</object>
+      <object>objects\obj_end</object>
       <objects name="Solid">
         <object>objects\obj_solid</object>
         <object>objects\obj_solidForPathFinding</object>
@@ -155,7 +158,9 @@
     <object>objects\obj_tester</object>
     <objects name="Visuals">
       <object>objects\obj_shadow</object>
+      <object>objects\obj_marker</object>
     </objects>
+    <object>objects\obj_levelCollectThing</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
