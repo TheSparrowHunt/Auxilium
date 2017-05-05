@@ -44,6 +44,14 @@ rspeedx = 0;
 
 prevx = x;
 prevy = y;
+
+if (place_meeting(x, y, obj_player)){
+    room_restart();
+}
+
+if (place_meeting(x, y, obj_giant)){
+    room_restart();
+}
 </string>
           </argument>
         </arguments>

@@ -161,6 +161,7 @@
     <room>rooms\rm_init</room>
     <room>rooms\rm_town</room>
     <room>rooms\rm_test</room>
+    <room>rooms\room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

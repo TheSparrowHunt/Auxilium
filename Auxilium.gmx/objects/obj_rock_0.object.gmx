@@ -64,11 +64,7 @@ if (!bounceState){
     }
 }
 else{
-    //if not on the ground yet
-    /*if (height &gt; 0) {
-        height -= 1;
-    }
-    else*/ if (height &lt;= 0){
+    if (height &lt;= 0){
         //basically sets collisions on
         if (mask_index != spr_rock_0){
             mask_index = spr_rock_0;
