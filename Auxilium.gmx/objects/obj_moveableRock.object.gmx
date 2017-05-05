@@ -139,7 +139,7 @@ previousmovex = movex;
 previousmovey = movey;
 
 
-collisionCheck();
+collisionCheckIgnoreWater();
 
 //fixes a bug with rotating when not moving
 if (prevx != x){

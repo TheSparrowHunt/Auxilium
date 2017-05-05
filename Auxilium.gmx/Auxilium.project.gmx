@@ -46,7 +46,12 @@
       <sprite>sprites\spr_font</sprite>
     </sprites>
     <sprite>sprites\spr_0Size</sprite>
+    <sprite>sprites\spr_1Size</sprite>
+    <sprite>sprites\spr_16x1</sprite>
+    <sprite>sprites\spr_1x16</sprite>
     <sprite>sprites\spr_water</sprite>
+    <sprite>sprites\spr_8x16</sprite>
+    <sprite>sprites\spr_16x8</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -76,6 +81,7 @@
         <script>scripts\playerMove.gml</script>
       </scripts>
       <script>scripts\collisionCheck.gml</script>
+      <script>scripts\collisionCheckIgnoreWater.gml</script>
       <script>scripts\setDrawPosition.gml</script>
       <script>scripts\solidMovesCreate.gml</script>
     </scripts>
