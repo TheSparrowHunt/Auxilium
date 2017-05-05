@@ -84,7 +84,7 @@ clearDraw();
 alarm[0] = 15;
 
 //sets the potential settings for pathfinding
-mp_potential_settings(2, 1, 5, true);
+mp_potential_settings(30, 3, 3, true);
 
 
 
